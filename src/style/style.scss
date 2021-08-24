@@ -1,2 +1,20 @@
-@import "custom";
-@import "~bootstrap/scss/bootstrap";
+@use 'custom';
+@use 'sections/navbar';
+@use 'sections/intro-section';
+@use 'sections/statistik';
+@use 'sections/footer';
+@use 'sections/protokol';
+@use 'sections/peringkat';
+
+@use 'components/typography';
+@use 'components/buttons';
+
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+svg {
+  margin-bottom: -1px;
+}

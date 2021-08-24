@@ -1,0 +1,11 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.peringkat {
+  @include gradient;
+  color: white;
+
+  .judul-section {
+    color: white;
+  }
+}

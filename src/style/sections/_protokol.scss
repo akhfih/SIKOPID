@@ -1,0 +1,19 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.lima-m {
+  position: relative;
+  padding: 1rem 0;
+
+  &__content {
+    padding: 1rem;
+    margin-top: 1rem;
+    @include media-breakpoint-up(lg) {
+      margin-top: 4.5rem;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}

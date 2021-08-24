@@ -1,9 +1,9 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common.js");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   plugins: [
     /* HTML Webpack Plugin */
     new CleanWebpackPlugin(),
@@ -13,12 +13,12 @@ module.exports = merge(common, {
       /* babel loader */
       {
         test: /\.js$/,
-        exclude: "/node_modules/",
+        exclude: '/node_modules/',
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
-              presets: ["@babel/preset-env"],
+              presets: ['@babel/preset-env'],
             },
           },
         ],

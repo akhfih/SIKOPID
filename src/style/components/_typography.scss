@@ -1,0 +1,27 @@
+@use '../custom' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+
+  &--intro {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 3.5rem;
+  }
+
+  &--description {
+    font-size: 1rem;
+    display: block;
+    margin-top: 1.2rem;
+    text-transform: none;
+  }
+}
+
+.judul-section {
+  color: $ungu-dark;
+
+  font-size: xx-large;
+}

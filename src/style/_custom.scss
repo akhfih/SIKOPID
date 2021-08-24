@@ -1,1 +1,11 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// MY THEME COLORS
+$purple-dark: #4e54c8;
+$purple-light: #bb6ef5;
+$pink: #8f94fb;
+$footer: #151414;
+$ungu-dark: #3e43a1;
+
+$primary: $purple-dark;
+$secondary: $pink;
+
+@import '~bootstrap/scss/bootstrap';
