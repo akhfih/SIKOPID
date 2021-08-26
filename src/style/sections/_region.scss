@@ -1,11 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-.peringkat {
+.region {
   @include gradient;
-  color: white;
-
-  .judul-section {
-    color: white;
-  }
 }

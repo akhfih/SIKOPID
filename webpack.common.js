@@ -26,6 +26,9 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+            options: {
+              esModule: false,
+            },
           },
           {
             loader: 'postcss-loader',
@@ -55,12 +58,12 @@ module.exports = {
       },
       /* file loader */
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|woff|woff2)$/,
         use: {
           loader: 'file-loader',
           options: {
             name: '[name].[hash].[ext]',
-            outputPath: 'image',
+            outputPath: 'assets',
           },
         },
       },
