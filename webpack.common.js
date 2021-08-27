@@ -56,7 +56,6 @@ module.exports = {
           },
         ],
       },
-      /* file loader */
       {
         test: /\.(jpg|png|woff|woff2)$/,
         use: {
