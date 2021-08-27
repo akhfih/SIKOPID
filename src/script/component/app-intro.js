@@ -22,8 +22,8 @@ class AppIntro extends HTMLElement {
                           yang penyebarannya begitu cepat. Lakukan pencegahan dengan menerapkan protokol 5M
                       </span>
                   </h1>
-                  <button type="button" class="btn btn btn-outline-primary  btn-custom">Selengkapnya 5M <i
-                          class="bi bi-arrow-right-circle more"></i></button>
+                  <a href="#protokol" type="button" class="btn btn btn-outline-primary  btn-custom">Selengkapnya 5M <i
+                          class="bi bi-arrow-right-circle more"></i></a>
               </div>
               <div class="col-md-6 intro">
                   <div class="image-box">
