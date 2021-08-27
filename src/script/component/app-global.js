@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable accessor-pairs */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable space-before-function-paren */
