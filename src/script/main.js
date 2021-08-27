@@ -9,7 +9,10 @@ import DataSource from './data/data-source';
 
 function main() {
   const globalElement = document.querySelector('app-global');
-  const regionElement = document.querySelector('app-region');
+  const listRegion = document.querySelector('.form-select');
+  const regionTerkonfirmasiElement = document.querySelector('.terkonfirmasi');
+  const regionSembuhElement = document.querySelector('.sembuh');
+  const regionMeninggalElement = document.querySelector('.meninggal');
 
   const kasusGlobal = async () => {
     try {
@@ -22,10 +25,16 @@ function main() {
     }
   };
 
-  const kasusRegion = async (kode) => {
+  const kasusRegion = async (e) => {
     try {
-      const result = await DataSource.kasusRegion(kode);
-      regionElement.data = result;
+      const result = await DataSource.kasusRegion(e.target.value);
+      regionTerkonfirmasiElement.textContent =
+        result.confirmed.value.toLocaleString('id');
+      regionSembuhElement.textContent =
+        result.recovered.value.toLocaleString('id');
+      regionMeninggalElement.textContent =
+        result.deaths.value.toLocaleString('id');
+      console.log(result);
     } catch (message) {
       alert('konesksi tidak ada kasus region');
       console.log(message);
@@ -35,25 +44,21 @@ function main() {
   const renderSelectList = async () => {
     try {
       const result = await DataSource.kodeRegion();
-      let pilih = '';
-      result.countries.forEach(
-        (item) => (pilih += `<option value=${item.iso2}>${item.name}</option>`)
-      );
-      regionElement.dataKode = pilih;
+      result.countries.forEach((item) => {
+        const opt = document.createElement('option');
+        opt.value = item.iso2;
+        opt.innerHTML = item.name;
+        listRegion.appendChild(opt);
+      });
     } catch (message) {
       console.log(message);
     }
   };
 
-  const eventUbah = function (e) {
-    kasusRegion(e.target.value);
-  };
-
   document.addEventListener('DOMContentLoaded', () => {
     kasusGlobal();
-    regionElement.eventUbah = eventUbah;
-
     renderSelectList();
+    listRegion.addEventListener('change', kasusRegion);
   });
 }
 

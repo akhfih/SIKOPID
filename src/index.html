@@ -17,7 +17,62 @@
 
     <main>
         <app-global></app-global>
-        <app-region></app-region>
+        <!-- <app-region></app-region> -->
+
+        <section id="region" class="region">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffff" fill-opacity="1" d="M0,192L1440,64L1440,0L0,0Z"></path>
+            </svg>
+
+            <div class="container">
+                <div class="row text-center">
+                    <h4 class="fw-bold lead mb-3 text-white fs-large judul-section">KASUS COVID-19 REGION</h4>
+
+                </div>
+                <div class="col-md-6 offset-md-3 mt-2 mb-3">
+                    <select class="form-select shadow-sm">
+                        <option selected>Pilih Region</option>
+
+                    </select>
+                </div>
+                <div class="row ">
+                    <div class="col-md-4 ">
+                        <div class="card global__data shadow-sm">
+                            <div class="card-body">
+                                <img src='./assets/sedih.png' alt="">
+                                <span class="count terkonfirmasi fw-bold fs-2">0</span>
+                                <span class="fw-bold badge text-white bg-warning">TERKONFIRMASI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card global__data shadow-sm">
+                            <div class="card-body">
+                                <img src='./assets/senyum.png' alt="">
+                                <span class="count sembuh fw-bold fs-2">0</span>
+                                <span class="fw-bold badge text-white bg-success">SEMBUH</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card global__data shadow-sm">
+                            <div class="card-body">
+                                <img src='./assets/nangis.png' alt="">
+                                <span class="count meninggal fw-bold fs-2">0</span>
+                                <span class="fw-bold badge text-white bg-danger">MENINGGAL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffff" fill-opacity="1" d="M0,192L1440,64L1440,320L0,320Z"></path>
+            </svg>
+        </section>`;
 
         <section class="protokol">
             <div class="container">
@@ -26,32 +81,14 @@
                     <span class="pb-2">Cegah Penularan Covid-19<span>
                 </div>
             </div>
-            <!-- <div class="container">
-                <div class="row pt-2 pb-2 mt-5 mb-3">
-                    <div class="col-md-6">
-                        <div class="bg-white p-3">
-                            <h2 class="fw-bold text-capitalize text-center">Mencuci Tangan</h2>
-                            <p>Rutin mencuci tangan hingga bersih adalah salah satu protokol kesehatan yang cukup
-                                efektif untuk mencegah penularan virus corona. </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <bg-white class="p-4 text-start"></bg-white>
-                        <p class="fw-light">Rutin mencuci tangan hingga bersih adalah salah satu protokol kesehatan yang
-                            cukup
-                            efektif untuk mencegah penularan virus corona.</p>
-                    </div>
-                </div>
-            </div> -->
-
-            <div class="container">
+            <div id="protokol" class="container">
                 <div class="row shadow-sm">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 lima-m">
                         <div class="lima-m__img text-center "><img src="./assets/cuci.png" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 lima-m">
-                        <div class="lima-m__content text-center">
+                        <div class="lima-m__content text-start">
                             <h2 class="fw-bold text-capitalize pb-2">1. Mencuci Tangan</h2>
                             <p>Rutin mencuci tangan hingga bersih adalah salah satu protokol kesehatan yang cukup
                                 efektif untuk mencegah penularan virus corona. </p>
@@ -67,7 +104,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 lima-m">
-                    <div class="lima-m__content text-center">
+                    <div class="lima-m__content text-start">
                         <h2 class="fw-bold text-capitalize pb-2">2. Memakai Masker</h2>
                         <p>Semua orang yang sehat maupun sakit agar selalu menggunakan masker saat beraktivitas di luar
                             rumah.</p>
@@ -83,7 +120,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 lima-m">
-                    <div class="lima-m__content text-center">
+                    <div class="lima-m__content text-start">
                         <h2 class="fw-bold text-capitalize  pb-2">3. Menjaga Jarak</h2>
                         <p>Menjaga jarak minimal 2 meter dengan orang lain. Hal ini mengurangi interaksi langsung yang
                             dapat
@@ -100,9 +137,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 lima-m">
-                    <div class="lima-m__content text-center">
+                    <div class="lima-m__content text-start">
                         <h2 class="fw-bold text-capitalize  pb-2">4. Menjauhi Kerumunan</h2>
-                        <p>Bila tidak ada keperluan yang mendesak tetaplah berada dirumah.</p>
+                        <p>Menghindari kerumunan dan juga berkumpul di ruangan yang berventilasi kurang baik.</p>
                     </div>
                 </div>
 
@@ -115,9 +152,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 lima-m">
-                    <div class="lima-m__content text-center">
+                    <div class="lima-m__content text-start">
                         <h2 class="fw-bold text-capitalize  pb-2">5. Mengurangi Mobilitas</h2>
-                        <p>Menghindari kerumunan dan juga berkumpul di ruangan yang berventilasi kurang baik.</p>
+                        <p>Bila tidak ada keperluan yang mendesak tetaplah berada dirumah.</p>
                     </div>
                 </div>
 

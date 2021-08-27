@@ -1,13 +1,17 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable space-before-function-paren */
 /* eslint-disable accessor-pairs */
 import sedih from '../../assets/sedih.png';
 import senyum from '../../assets/senyum.png';
 import nangis from '../../assets/nangis.png';
-
 class AppRegion extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: 'open' });
+    const style = document.createElement('style');
+    // eslint-disable-next-line no-undef
+    // this.style.textContent = styles;
+    // this.shadowDOM.appendChild(style);
   }
 
   connectedCallback() {
@@ -50,7 +54,6 @@ class AppRegion extends HTMLElement {
 
   set eventUbah(event) {
     this._event = event;
-    console.log(event);
   }
 
   set data(data) {
@@ -64,13 +67,14 @@ class AppRegion extends HTMLElement {
 
   teks() {
     this.shadowDOM.querySelector('.terkonfirmasi').textContent =
-      this._terkonfirmasi || 'tidak';
+      this._terkonfirmasi;
     this.shadowDOM.querySelector('.sembuh').textContent = this._sembuh;
     this.shadowDOM.querySelector('.meninggal').textContent = this._meninggal;
   }
 
   render() {
     this.shadowDOM.innerHTML = `
+    
     <section id="region" class="region">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffff" fill-opacity="1" d="M0,192L1440,64L1440,0L0,0Z"></path>

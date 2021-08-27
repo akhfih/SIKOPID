@@ -17,13 +17,13 @@ class AppNav extends HTMLElement {
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item ">
-                        <a class="nav-link active" href="#">HOME</a>
+                        <a class="nav-link active" href="#home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">STATISTIK</a>
+                        <a class="nav-link" href="#global">STATISTIK</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PROTOKOL</a>
+                        <a class="nav-link" href="#protokol">PROTOKOL</a>
                     </li>
 
                     <li class="nav-item">
